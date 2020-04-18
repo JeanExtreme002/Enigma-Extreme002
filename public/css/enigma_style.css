@@ -1,0 +1,31 @@
+@font-face {
+    font-family: NanumBrushScript;
+    src: url("../fonts/NanumBrushScript.ttf");
+}
+
+@font-face {
+    font-family: NanumPenScript;
+    src: url("../fonts/NanumPenScript.ttf");
+}
+
+@font-face {
+    font-family: Orbitron;
+    src: url("../fonts/Orbitron.ttf");
+}
+
+body {
+    background: #000;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+}
+
+#enigma {
+    box-sizing: border-box;
+    color: rgb(160,160,160);
+    font-family: NanumBrushScript, Arial;
+    font-size: 40px;
+    height: 450px;
+}

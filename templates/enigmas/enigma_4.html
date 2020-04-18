@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enigma 4</title>
+        <!-- template -->
+        <script>
+            function generateWord(){
+
+                var word = "ruscochar".split("");
+                var length = word.length;
+                var newWord = "";
+
+                for(i = 0; i < length; i++){
+                    var index = Math.floor(Math.random() * word.length);
+                    newWord += word[index];
+                    word.splice(index, 1);
+                }
+                document.querySelector("span").innerHTML = newWord.split("").join(" ").toUpperCase();
+            }
+            var interval = setInterval(generateWord, 1000);
+        </script>
+    </head>
+    <body>
+        <div id="enigma" style="padding-top: 200px;">
+            <span style="color: rgb(150,0,0);">R U S C O C H A R</span>
+        </div>
+        <button onclick="sendAnswer();">Responder</button>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enigma 8</title>
+        <!-- template -->
+        <script>
+            function setText(){
+
+                const element = document.getElementById("enigma");
+
+                for (i = 0; i <= 100; i++) {
+
+                    if (!String(i).match("4")) {
+                        element.innerHTML += " " + i;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="enigma"  style="margin-left: 30%; margin-right: 30%; padding-top: 30px;"></div>
+        <button onclick="sendAnswer();">Responder</button>
+        <script>setText();</script>
+    </body>
+</html>

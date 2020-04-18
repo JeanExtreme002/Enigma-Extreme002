@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Bem Vindo | Enigma Extreme002</title>
+
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Jean Loui Bernard Silva de Jesus"/>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/index_style.css"/>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+        
+        <script>
+            var interval = setInterval(() => {
+
+                const audio = document.getElementById("audio");
+
+                if (audio.paused) {
+                    audio.play();
+
+                } else {
+                    clearInterval(interval);
+                };  
+            }, 200);
+
+            sessionStorage.fase = 0;
+        </script>
+    </head>
+
+    <body class="text-center">
+
+        <h1>BEM VINDO AO ENIGMA EXTREME002</h1>
+
+        <audio id="audio" autoplay loop>
+            <source src="sounds/main_sound.mp3" type="audio/mpeg"/>
+        </audio>
+
+        <button class="btn btn-primary" id="mainButton" onclick="send(0);">Iniciar</button>
+    </body>
+</html>

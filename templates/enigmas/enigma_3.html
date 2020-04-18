@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enigma 3</title>
+        <!-- template -->
+        <script>
+            var interval = setInterval(() => {
+                const date = new Date();
+                const time = date.getUTCHours() + " : " + date.getUTCMinutes() + " : " + date.getUTCSeconds();
+                document.querySelector("#time").innerHTML = time;
+            }, 100);
+        </script>
+        <style>
+            #time{
+                border: solid 6px rgb(100,100,100);
+                border-radius: 3px;
+                color: rgb(100, 100, 100);
+                font-family: 'Orbitron', Arial;
+                font-size: 60px;
+                width: 40%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="enigma" align="center" style="padding-top: 200px;">
+            <div id="time">00 : 00 : 00</div>
+        </div>
+        <button onclick="sendAnswer();">Responder</button>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Dica | Enigma Extreme002</title>
+
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Jean Loui Bernard Silva de Jesus"/>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/help_style.css"/>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <script>
+            function show() {
+                
+                document.getElementById("audio").play();
+                
+                document.getElementById("mainButton").hidden = true;
+                document.getElementById("help_image").hidden = true;
+
+                document.getElementById("message").hidden = false;
+                document.getElementById("image").hidden = false;
+            }
+        </script>
+    </head>
+
+    <body class="text-center">
+
+        <div style="height: 450px; box-sizing: border-box;">
+            <img id="image" src="images/exorcist.jpg" hidden="true" width="900"/>
+            <img id="help_image" src="images/help.png"/>
+        </div>
+
+        <audio id="audio" loop>
+            <source src="sounds/exorcist.mp3" type="audio/mpeg"/>
+        </audio>
+
+        <div id="message" hidden="true" style="margin-top: 100px; font-size: 40px; font-family: Arial;">
+            Sem dica para você! Ha ha ha
+        </div>
+        <button class="btn btn-primary" id="mainButton" onclick="show();">Revelar dica</button>
+    </body>
+</html>
