@@ -6,12 +6,13 @@
         <meta charset="UTF-8"/>
         <meta name="author" content="Jean Loui Bernard Silva de Jesus"/>
 
+        <link rel="prefetch" href="fonts/NanumBrushScript.ttf" as="font"/>
+        <link rel="prefetch" href="fonts/NanumPenScript.ttf" as="font"/>
+        <link rel="prefetch" href="fonts/Orbitron.ttf" as="font"/>
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/index_style.css"/>
-
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
         <script src="js/script.js"></script>
         
         <script>
@@ -19,7 +20,7 @@
 
                 const audio = document.getElementById("audio");
 
-                if (audio.paused) {
+                if (audio && audio.paused) {
                     audio.play();
 
                 } else {
